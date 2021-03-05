@@ -1,0 +1,240 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block head %}
+<title>EDC,TIET-Startups</title>
+<style>
+    .container {
+        width: 100% !important;
+    }
+
+    .vc_row {
+        width: 98vw !important;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 0px 110px 0px;
+        color: #000;
+    }
+
+    .post-create a {
+        margin-right: 20px;
+        border-radius: 10px;
+        padding: 15px 90px;
+        margin: 10px auto;
+        font-size: 21px;
+        color: black;
+        text-align: center;
+        display: block;
+        color: white;
+        transition: 0.5s;
+        background: rgb(47, 146, 187);
+        max-width: 450px;
+    }
+
+    .post-create a:hover {
+        transform: scale(1.02);
+        font-size: 21px;
+        color: black;
+        text-align: center;
+        display: block;
+        color: white;
+    }
+
+    .contactt:hover{
+        color: black !important;
+
+    }
+    #startupheader{
+        opacity: 0.7;
+    }
+</style>
+<style>
+    .flexx {
+        margin-left: 15px;
+        width: 100%;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-content: center !important;
+    }
+    .card {
+        width:39vw; 
+        margin:0 5% 5% 5%;
+    }
+    @media only screen and (max-width: 1024px) {
+        .flexx {
+            margin-left: -15px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .card {
+            width:60vw; 
+            margin:0 20% 5% 20%;
+        }
+    }
+    @media only screen and (max-width: 425px) {
+        .flexx {
+            margin-left: -15px;
+        }
+        .card {
+            width:97vw; 
+            margin:0 1.5% 5% 1.5%;
+
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .vc_column_container>.vc_column-inner {
+            padding: 0px !important;
+        }
+    }
+</style>
+{% endblock head %}
+
+
+<!-- page -->
+{% block bodytag %}
+
+class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5
+vc_responsive"
+
+{% endblock bodytag %}
+
+{% block body %}
+            <div class="main-content ">
+                <div class="row">
+                    <div class="vc_row wpb_row vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_layerslider_element wpb_content_element">
+                                        <script data-cfasync="false"
+                                            type="text/javascript">var lsjQuery = jQuery;</script>
+                                        <script data-cfasync="false" type="text/javascript">
+                                            lsjQuery(document).ready(function () {
+                                                if (typeof lsjQuery.fn.layerSlider == "undefined") {
+                                                    if (window._layerSlider && window._layerSlider.showNotice) {
+                                                        window._layerSlider.showNotice('layerslider_1', 'jquery');
+                                                    }
+                                                } else {
+                                                    lsjQuery("#layerslider_1").layerSlider({ sliderVersion: '6.7.1', type: 'fullwidth', responsiveUnder: 1000, allowFullscreen: false, maxRatio: 1000, skin: 'v6', navPrevNext: false, hoverPrevNext: false, navStartStop: false, navButtons: false, showCircleTimer: false, thumbnailNavigation: 'disabled', skinsPath: 'https://skywarriorthemes.com/benri/demo1/wp-content/plugins/LayerSlider/static/layerslider/skins/' });
+                                                }
+                                            });
+                                        </script>
+                                        <div id="layerslider_1" class="ls-wp-container fitvidsignore"
+                                            style="width:1280px;height:700px;margin:0 auto;margin-bottom: 0px;">
+                                            <div class="ls-slide" data-ls="kenburnsscale:1.2;">
+                                                <img width="2000"
+                                                    height="1000" 
+                                                    src="{%static 'investors/startup_bg.jpg'%}"
+                                                    class="ls-bg" id="trans" alt="starup_home"
+                                                    sizes="(max-width: 2000px) 100vw, 2000px" id="startupheader"
+                                                        />
+
+                                                <h1 class="ls-l"
+                                                    style=" top:228px;left:320px;text-align:center;font-weight:800;font-style:normal;text-decoration:none;font-family:Lato;font-size:100px;line-height:120px;color:#ffffff; text-align: center; padding-left: 80px"
+                                                    data-ls="showinfo:1;parallax:true;parallaxlevel:-18;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">
+                                                    STARTUPS</h1>
+                                                    <a style ="" class="ls-l"
+                                                    href="#startup" target="_self"
+                                                    data-ls="showinfo:1;offsetyin:-50px;delayin:1000;parallax:true;parallaxlevel:-10;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">
+                                                    
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="vc_row-full-width vc_clearfix"></div>
+
+                    <div class="clear"></div>
+
+
+                </div>
+            </div>
+
+<br>
+<br>
+<br>
+
+    <div class="row main_body">
+        <div class="col-12 col-md-8 main_body_center" style="display:block; margin:auto;">    
+            <div class="vc_row wpb_row vc_row-fluid vc_custom_1494625858679 flexx" style="">
+                {% if startup %}
+                {% for obj in startup %}
+                <div class="wpb_column vc_column_container vc_col-sm-4 card ">
+                    <div class="vc_column-inner vc_custom_1494625737076">
+                        <div class="wpb_wrapper">
+                            <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                                <div class="flip-box ifb-custom-height  horizontal_flip_left flip-box-custom-height flip-ifb-custom-height"
+                                    style="" data-min-height='550px'>
+                                    <div class="ifb-flip-box" id="flip-box-wrap-9665">
+                                        <div class="ifb-face ifb-front " style="color:#333333;background:#e6e6e6;  ">
+                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                                <h3 class="ult-responsive flipbox_heading"
+                                                    data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading'
+                                                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                    style="color:#333333; font-size: 30px;">{{obj.startup_name}}</h3>
+
+                                                <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <p>Founder : {{obj.founders}} </p>
+                                                </div>
+                                                
+                                                <div style="height: 400px; width: 100%; align-content: center;" class="">
+                                                    {% if obj.startup_logo.height > obj.startup_logo.width %}
+                                                    <img class="img-icon" alt="{{obj.startup_name}}" src="{{obj.startup_logo.url}}" style="height: 100%; width: 100%;" />
+                                                    {% else %}
+                                                    <img class="img-icon" alt="{{obj.startup_name}}" src="{{obj.startup_logo.url}}" style="height: 100%; width: 100%;" />
+                                                    {% endif %}
+                                                </div>
+                                    
+                                            </div>
+                                        </div><!-- END .front -->
+                                        <div class="ifb-face ifb-back" style="color:#333333;background:#e6e6e6;  ">
+                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                                <h3 class="ult-responsive flipbox_heading"
+                                                    data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading'
+                                                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                    style="color:#333333; ">{{obj.startup_name}}</h3>
+                                                <div class="ifb-flip-box-section-content ult-responsive"
+                                                    data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                    style="color:#333333;color:#333333;">
+                                                    <p> Field of Work : {{obj.field_of_work}} <br> <br> {{obj.about_the_startup}}<br>
+                                                        <br> Link to Website : <a href="{{obj.website}}">{{obj.website}}</a> 
+                                                        <br> Email: <a href="mailto:{{obj.user}}">{{obj.user}}</a> </p>
+                                                </div>
+                                            </div>
+                                        </div><!-- END .back -->
+                                    </div> <!-- ifb-flip-box -->
+                                </div> <!-- flip-box -->
+                            </div><!-- End icon block -->
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+
+                    {% else %}
+                    <div class="wrapper">
+                        <h1 style="font-weight: bold;">Coming Soon!</h1>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}       

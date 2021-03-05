@@ -1,0 +1,131 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block head%}
+<title>EDC,TIET-Profile Student</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 70%;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        background: #eeeeee;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+
+    .profile-pic {
+        border-radius: 50%;
+        width: 200px !important;
+        height: 200px !important;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+
+    .btn{
+        margin-right: 20px;
+        border-radius: 10px; 
+        padding: 10px 70px; 
+        margin: 20px auto; 
+        font-size: 21px; 
+        color: black; 
+        text-align: center;
+        display:block; 
+        color: white;
+        transition: 0.5s;
+        background: rgb(47, 146, 187);
+        max-width: 300px;
+    }
+
+    .btn:hover {
+        transform: scale(1.02); 
+        font-size: 21px; 
+        text-align: center;
+        display:block; 
+        color: white;
+    }
+</style>
+
+
+{% endblock head%}
+
+{% block bodytag %}
+
+class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5
+vc_responsive" 
+
+{% endblock bodytag %}
+
+
+
+{% block body %}
+
+
+
+<div class="card" style="margin-top: 10%; margin-bottom: 2%; padding: 2% 4% 2% 4%;">
+    <h1 style="font-weight: bold; margin-bottom: 1%; color: #000">{{object.name}}</h1>
+    <a href="{{object.user.email}}">
+        <h3 style="font-weight: bold; margin-bottom: 1%; color: grey">{{object.user.email}}</h3>
+    </a>
+    <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 30%; margin-top: 2%; margin-bottom: 4%;">
+    
+    <div style="text-align: left !important;">
+
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
+            <div style="min-width: 50%; text-align: center;">
+                <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">City Of Residence</h2>
+                <p style="font-size: large; font-weight: 120; color: grey">{{object.city_of_residence}}</p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+
+            <div style="min-width: 50%; text-align: center;">
+                <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">Contact</h2>
+                <p style="font-size: large; font-weight: 120;color: grey ">Phone No.: <a style="color: #888888; text-decoration: none;">{{object.contact}}</a></p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+        </div>
+        <!-- <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 15%; margin: 2% 2% 4% 1%;"> -->
+        
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
+            <div style="min-width: 50%; text-align: center;">
+                <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">College</h2>
+                <p style="font-size: large; font-weight: 120; color: grey">{{object.college}}</p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+            <div style="min-width: 50%; text-align: center;">
+                <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">CGPA</h2>
+                <p style="font-size: large; font-weight: 120;">{{object.cgpa}}/10</p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+        </div>
+       
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
+            <div style="min-width: 50%; text-align: center;">
+                <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">Area Of Specialization</h2>
+                <p style="font-size: large; font-weight: 120;">{{object.area_of_specialization}}</p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+            <div style="min-width: 50%; text-align: center;">
+               <h2 style="font-weight: bold; margin-bottom: 1%; color: #000">Year Of Study</h2>
+                <p style="font-size: large; font-weight: 120;">{% if object.year_of_study == 1 %} 1st Year
+                {% elif object.year_of_study == 2 %} 2nd Year 
+                {% elif object.year_of_study == 3 %} 3rd Year 
+                {% else %} {{object.year_of_study}}th Year {% endif %}</p>
+                <hr style="border: 1px solid rgba(0, 0, 0, 0.05); max-width: 100%; margin: 2% 2% 4% 1%;">
+            </div>
+        </div>
+
+    </div>
+
+    <a href="{% url 'profile-update' %}" class="btn">Update Profile</a>
+
+</div>
+
+{% endblock body%}

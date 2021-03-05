@@ -1,0 +1,82 @@
+{% extends 'home/base.html' %} {% load static %} {% load crispy_forms_tags %} 
+{% block head %}
+<title>EDC,TIET-Blog</title>
+<style>
+  .container{
+      width:100% !important;
+  }
+
+  .page-title-wrap{
+  background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+  }
+
+  .page-title-bg{
+      background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+  }
+
+  .btn{
+      margin-right: 20px;
+      border-radius: 10px;
+      padding: 10px 70px;
+      margin-top: 20px;
+      font-size: 21px;
+      color: black;
+      text-align: center;
+      display:block;
+      color: white;
+      transition: 0.5s;
+      background: rgb(47, 146, 187);
+      max-width: 300px;
+  }
+
+  .btn:hover {
+      transform: scale(1.02);
+      font-size: 21px;
+      color: black;
+      text-align: center;
+      display:block;
+      color: white;
+  }
+</style>
+{% endblock head %} {% block bodytag %} class="paged page-template
+page-template-tmp-blog-template page-template-tmp-blog-template-php page
+page-id-1039 paged-2 page-paged-2 woocommerce-no-js has-fixed-header
+wpb-js-composer js-comp-ver-6.0.5 vc_responsive" {% endblock bodytag %} 
+{% block body %}
+
+<div class="page-title-wrap">
+  <div class="page-title-bg rest-enable-parallax"></div>
+  <div class="page-title-tint"></div>
+  <div class="container header-flex header-enable-parallax">
+    <h1>Write A Blog</h1>
+  </div>
+</div>
+
+<div
+  class="main-content"
+  style="
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 70%;
+    font-size: large;
+  "
+>
+  <div class="content-section">
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        {{ form|crispy }}
+      </fieldset>
+      <div
+        class="form-group"
+        style=" width: 1000px; max-width: 70%; font-size: large;"
+      >
+        <button class="btn btn-outline-info" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock body %}

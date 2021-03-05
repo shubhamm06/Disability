@@ -1,0 +1,273 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block head %}
+<title>EDC,TIET-Venture Capitalist</title>
+<style>
+    .container {
+        width: 100% !important;
+    }
+
+    .vc_row {
+        width: 98vw !important;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 0px 110px 0px;
+        color: #000;
+    }
+
+
+    .post-create a {
+        margin-right: 20px;
+        border-radius: 10px;
+        padding: 15px 9px;
+        margin: 10px auto;
+        font-size: 21px;
+        color: black;
+        text-align: center;
+        display: inline;
+        color: white;
+        transition: 0.5s;
+        background: rgb(47, 146, 187);
+        max-width: 450px;
+    }
+
+    .post-create a:hover {
+        transform: scale(1.02);
+        font-size: 21px;
+        color: black;
+        text-align: center;
+        display: inline;
+        color: white;
+    }
+
+    .contactt:hover {
+        color: black !important;
+    }
+</style>
+<style>
+    .flexx {
+        margin-left: 15px;
+        width: 100%;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-content: center !important;
+    }
+    .card {
+        width:39vw; 
+        margin:0 5% 5% 5%;
+    }
+    @media only screen and (max-width: 1024px) {
+        .flexx {
+            margin-left: -15px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .card {
+            width:60vw; 
+            margin:0 20% 5% 20%;
+        }
+    }
+    @media only screen and (max-width: 425px) {
+        .flexx {
+            margin-left: -15px;
+        }
+        .card {
+            width:97vw; 
+            margin:0 1.5% 5% 1.5%;
+
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .vc_column_container>.vc_column-inner {
+            padding: 0px !important;
+        }
+    }
+</style>
+{% endblock head %}
+
+
+<!-- page -->
+{% block bodytag %}
+
+class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5
+vc_responsive"
+
+{% endblock bodytag %}
+
+{% block body %}
+<div class="main-content ">
+    <div class="row">
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_layerslider_element wpb_content_element">
+                            <script data-cfasync="false" type="text/javascript">var lsjQuery = jQuery;</script>
+                            <script data-cfasync="false" type="text/javascript">
+                                lsjQuery(document).ready(function () {
+                                    if (typeof lsjQuery.fn.layerSlider == "undefined") {
+                                        if (window._layerSlider && window._layerSlider.showNotice) {
+                                            window._layerSlider.showNotice('layerslider_1', 'jquery');
+                                        }
+                                    } else {
+                                        lsjQuery("#layerslider_1").layerSlider({ sliderVersion: '6.7.1', type: 'fullwidth', responsiveUnder: 1000, allowFullscreen: false, maxRatio: 1000, skin: 'v6', navPrevNext: false, hoverPrevNext: false, navStartStop: false, navButtons: false, showCircleTimer: false, thumbnailNavigation: 'disabled', skinsPath: 'https://skywarriorthemes.com/benri/demo1/wp-content/plugins/LayerSlider/static/layerslider/skins/' });
+                                    }
+                                });
+                            </script>
+                            <div id="layerslider_1" class="ls-wp-container fitvidsignore"
+                                style="width:1280px;height:650px;margin:0 auto;margin-bottom: 0px;">
+                                <div class="ls-slide" data-ls="kenburnsscale:1.2;">
+                                    <img width="2000" height="1000" src="./investors.jpg" class="ls-bg " id="trans"
+                                        alt=""
+                                        srcset="https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/handshake-1938-Getty-960x540.jpg"
+                                        sizes="(max-width: 2000px) 100vw, 2000px" />
+
+                                    <h1 class="ls-l"
+                                        style=" top:50%;left:50%;text-align:center;font-weight:800;font-style:normal;text-decoration:none;font-family:Lato;font-size:100px;line-height:120px;color:#ffffff; text-align: center; padding-left: 80px"
+                                        data-ls="showinfo:1;parallax:true;parallaxlevel:-18;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">
+                                        VENTURE<br /> CAPITALIST</h1>
+                                    <a style="" class="ls-l" href="#startup" target="_self"
+                                        data-ls="showinfo:1;offsetyin:-50px;delayin:1000;parallax:true;parallaxlevel:-10;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vc_row-full-width vc_clearfix"></div>
+        <div class="clear"></div>
+
+    </div>
+</div> <!-- content -->
+
+{% if user.is_authenticated and user.is_team %}
+<div class="post-create" style="display: flex !important; justify-content: center !important;">
+    <a href="{% url 'vencap-create' %}" style="margin: 2%">Add a Venture Capitalist</a>
+</div>
+{% endif %}
+
+
+
+<div class="row main_body" style="display:flex; align-content: center;">
+    <div class="col-12 col-md-8 col-sm-12 main_body_center" style="display:block; margin:auto;">
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1494625858679 flexx">
+            {% if venture %}
+            {% for vencap in venture %}
+            <div class="wpb_column vc_column_container vc_col-sm-4 card">
+                <div class="vc_column-inner vc_custom_1494625737076">
+                    <div class="wpb_wrapper">
+                        <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                            <div class="flip-box ifb-custom-height  horizontal_flip_left flip-box-custom-height flip-ifb-custom-height"
+                                style="" data-min-height='550px'>
+                                <div class="ifb-flip-box" id="flip-box-wrap-9665">
+                                    <div class="ifb-face ifb-front " style="color:#333333;background:#e6e6e6;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h2 class="ult-responsive flipbox_heading"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#000; font-size: 30px; padding-bottom: 20px;">
+                                                {{vencap.name}} </h2>
+                                            {% if vencap.photo.url %}
+                                            <div style="height: 45%; width: 100%; align-content: center;" class="">
+                                                {% if vencap.photo.height > vencap.photo.width %}
+                                                <img class="img-icon" alt="{{vencap.name}}" src="{{vencap.photo.url}}"
+                                                    style="height: 100%; width: auto;" />
+                                                {% elif vencap.photo.width > vencap.photo.height %}
+                                                <img class="img-icon" alt="{{vencap.name}}" src="{{vencap.photo.url}}"
+                                                    style="height: auto; width: 100%; margin: auto;" />
+                                                {% endif %}
+                                            </div>
+                                            {% endif %}
+                                            {% if vencap.contact %}
+                                            <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <h2 style="font-size: 20px; padding-top: 8px;">Contact No.: </h2><a
+                                                    class="contactt"
+                                                    href="tel:{{vencap.contact}}">{{vencap.contact}}</a>
+                                            </div>
+                                            {% endif %}
+                                            <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <h2 style="font-size: 20px; padding-top: 8px;">Email Id: </h2><a
+                                                    class="contactt" href="mailto:{{vencap.email}}">{{vencap.email}}</a>
+                                            </div>
+                                            <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <h2 style="font-size: 20px; padding-top: 8px;">Startups Funded:
+                                                </h2>
+                                                <p>{{vencap.startups_funded}} </p>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .front -->
+                                    <div class="ifb-face ifb-back"
+                                        style="color:#333333;background:#e6e6e6; margin-top: 0 !important;">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h3 class="ult-responsive flipbox_heading"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#000;  font-size: 30px;">{{vencap.name}}</h3>
+
+
+
+                                            <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <h2 style="font-size: 20px; padding-top: 16px;">Industries: </h2>
+                                                <p>{{vencap.industries}}</p>
+                                            </div>
+
+                                            <div class="ifb-flip-box-section-content ult-responsive"
+                                                data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive'
+                                                data-responsive-json-new='{"font-size":"","line-height":""}'
+                                                style="color:#333333;color:#333333;">
+                                                <h2 style="font-size: 20px; padding-top: 16px;">About: </h2>
+                                                <p>{{vencap.about}}</p>
+                                            </div>
+                                            {% if user.is_team %}
+                                            <div class="post-create"
+
+                                                style="display: flex; flex:initial;flex-direction: row; flex-wrap: wrap; padding-top: 10px; justify-content: space-around; width: 100%; margin: auto">
+                                                <a style="margin-bottom: 0" href="{% url 'vencap-update' vencap.id %}">Update</a>
+                                                <a style="margin-bottom: 0" href="{% url 'vencap-delete' vencap.id %}">Delete</a>
+
+                                            </div>
+                                            {% endif %}
+                                        </div>
+
+
+                                    </div>
+                                </div><!-- END .back -->
+                            </div> <!-- ifb-flip-box -->
+                        </div> <!-- flip-box -->
+                    </div><!-- End icon block -->
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+            <div class="wrapper">
+                <h1 style="font-weight: bold;">Coming Soon!</h1>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{%endblock body%}

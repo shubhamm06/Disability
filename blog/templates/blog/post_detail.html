@@ -1,0 +1,139 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block head %}
+<title>EDC,TIET-Blog</title>
+<style>
+    body{
+        color:yellow;
+    }
+    .nav-previous > a:hover, .nav-next > a:hover {
+        color: black;
+    }
+    .btn:hover {background-color:#DB0000 }
+
+    .post-create a {
+        margin-right: 20px;
+        border-radius: 10px; 
+        padding: 10px 90px; 
+        margin-top: 20px; 
+        font-size: 21px; 
+        color: black; 
+        text-align: center;
+        display:block; 
+        color: white;
+        transition: 0.5s;
+        background: rgb(47, 146, 187);
+        max-width: 300px;
+    }
+
+    .post-create a:hover {
+        transform: scale(1.02); 
+        font-size: 21px; 
+        color: black; 
+        text-align: center;
+        display:block; 
+        color: white;
+    }
+</style>
+{% endblock head %}
+
+{% block bodytag %}
+    class="paged page-template page-template-tmp-blog-template page-template-tmp-blog-template-php page page-id-1039 paged-2 page-paged-2 woocommerce-no-js has-fixed-header     wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+{% endblock bodytag %}
+
+{% block body %}    
+<div class=" blog-ptw ">
+    <div class="container header-flex" style="width: 82%; text-align: center; color: #555;">                        
+        <div class="pmeta-category" style="margin-top: 120px;"></div>
+        <h1 style="font-weight: bold;font-family: arial ;font-size: 50px">{{ post.title }}</h1>                
+        <div class="post-meta" style="margin-top: 10px;">
+            <p style="font-color: black; font-weight: bolder;"><span class="pmeta-author" style="color: #555;">
+                <i class="fas fa-user-circle"></i>
+                By
+                <a href="" title="View all posts by Skywarrior" rel="author" style="color: #555;">{{ post.author }}</a></p>
+            </span>
+            <p style="font-color: black; font-weight: bolder;"><span class="pmeta-date" style="color: #555;"><i class="far fa-calendar"></i>{{ post.date_published }}</span></p>
+            <!-- <span class="pmeta-comments">
+                <a data-original-title="4 comments in this post" href="index.html#comments" data-toggle="tooltip" style="color: #555">
+                    <i class="fas fa-comments"></i> 4 Comments
+                </a>
+            </span> -->
+        </div>
+    </div>
+</div>                                            
+<div class="center" >
+    {% if user.is_authenticated %}
+        {% if user.is_team %}
+            
+            <div class="post-create" style="display: flex; flex-direction: row; flex-wrap: wrap; padding-top: 20px; justify-content: space-around; width: 80%; margin: auto">
+                <a href="{% url 'post-update' post.id %}">Update Blog</a>
+                <a href="{% url 'post-delete' post.id %}">Delete Blog</a>
+            </div> 
+
+         {% endif %}
+    {% endif %}
+</div>
+
+
+<div class="main-content ">
+    <div class="blog blog-nosidebar">
+        <div class="container">
+            <div class="col-12  post-142 post type-post status-publish format-standard has-post-thumbnail hentry category-classics category-natu category-retro tag-machine-motion tag-photog tag-prints-3d" >
+
+                <div class="blog-post">
+                    <div class="blog-content">
+                        <img src="{{ post.blog_image.url }}" style="width: 100%; height: 70vh;"/><div style="text-align: justify;font-family: poppins; color: black; font-size: 18px; font-weight: medium">
+                         {{ post.content_markdown }}...</div>
+                    </div><!-- /.blog-content -->
+
+
+                    <div class="clear"></div>
+                </div><!-- /.blog-post -->
+
+                <div class="clear"></div>
+
+                <div class="author-wrapper" style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                    <img src="{{ post.author_image.url }}" width="100" height="100" position="center" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo" alt="{{ post.author }}" style="border: 1px solid rgba(135, 139, 135, 0.05); color: black;" />
+                    <div id="author-info">
+                        <a href="mailto:{{ post.email }}"><h3 style="font-weight: medium; color: black;font-family: comic sans;text-align:left">{{ post.author }}</h3>
+                        </a>
+                        <div style="font-size: 14px; font-weight:bolder ; color: black;text-align:center">{{ post.author_markdown }}</div>
+                        <!-- <a class="author-link" href="" >See all author posts </a> -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <nav class="navigation post-navigation" role="navigation">
+                    <h2 class="screen-reader-text">Post navigation</h2>
+                    <div class="nav-links">
+                        <div class="nav-previous">
+                            {% if post.get_prev_post %}
+                            <a href="{% url 'post-detail' post.get_prev_post.id %}" rel="prev" >
+                                <span class="screen-reader-text">Previous Post:</span>
+                                <span class="nav-title">
+                                    <span class="nav-title-icon-wrapper"><i class="fas fa-arrow-left"></i></span> 
+                                    Previous
+                                </span>
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="nav-next">
+                            {% if post.get_next_post %}
+                            <a href="{% url 'post-detail' post.get_next_post.id %}" rel="next">
+                                <span class="screen-reader-text">Next Post:</span>
+                                <span class="nav-title"> Next
+                                    <span class="nav-title-icon-wrapper"><i class="fas fa-arrow-right"></i></span>
+                                </span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </nav>
+            </div><!-- /.span8 -->
+            
+        </div><!-- /container -->
+    </div><!-- /blog -->
+</div> <!-- content -->
+{% endblock body %}

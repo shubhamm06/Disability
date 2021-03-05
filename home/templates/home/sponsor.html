@@ -1,0 +1,436 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block head %}
+<link rel="pingback" href="{% static 'home/xmlrpc.php'%}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EDC,TIET-Partners</title>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1494691486743 {
+            margin-top: 100px !important;
+            margin-bottom: 50px !important;
+        }
+
+        .vc_custom_1494694034819 {
+            margin-top: 100px !important;
+            margin-bottom: 50px !important;
+            padding-top: 100px !important;
+            padding-bottom: 50px !important;
+        }
+
+        .vc_custom_1494693706267 {
+            margin-bottom: 50px !important;
+        }
+
+        .vc_custom_1494693926589 {
+            padding-top: 70px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .vc_custom_1494691324074 {
+            padding-top: 100px !important;
+            padding-right: 100px !important;
+            padding-left: 100px !important;
+        }
+
+        .vc_custom_1494690362247 {
+            padding-top: 0px !important;
+            padding-right: 0px !important;
+            padding-bottom: 0px !important;
+            padding-left: 0px !important;
+        }
+
+        .vc_custom_1494690816063 {
+            margin-top: 0px !important;
+            margin-right: 0px !important;
+            margin-bottom: 0px !important;
+            margin-left: 0px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .vc_custom_1494693797988 {
+            padding-top: 20px !important;
+            padding-right: 50px !important;
+            padding-bottom: 20px !important;
+            padding-left: 50px !important;
+        }
+
+        /* Style all font awesome icons */
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Add a hover effect if you want */
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .container {
+            margin: 0;
+            
+        }
+
+        @media (max-width: 700px) {
+            .counters .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .counters .container > div:nth-of-type(1),
+            .counters .container > div:nth-of-type(2) {
+                border-bottom: 1px lightskyblue solid;
+                padding-bottom: 20px;
+            }
+        }
+
+        .main-content > .container{
+            z-index: 9;
+        }
+
+        .container{
+            width:1500px;
+            position:relative;
+            margin:0 auto;
+        }
+
+        .container:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        body.boxed .container{
+            width: auto;
+        }
+
+        .fullwidth .container{
+            width:100%;
+        }
+
+        .page-title-wrap, .page-title-wrap .container{
+            moz-transform: translate3d(0px, 0px, 0px);;
+            transform: translate3d(0px, 0px, 0px); opacity: 1;
+        }
+
+        .page-title-wrap .container{
+            z-index: 11;
+        }
+
+        #custom__menu .container{
+            width:100%;
+        }
+
+        .wpb_column .wpb_wrapper .smile-icon-timeline-wrap .timeline-wrapper .timeline-block {
+            margin-bottom: 10px;
+            border-color: rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .vc_row {
+            margin-left: 0px !important;
+        }
+
+        ul li i{
+            padding-right: 0px !important;
+        }
+        
+        @media(max-width: 500px){
+            p{
+               font-size: 16px !important;
+            }
+        }
+        @media(max-width: 350px){
+            p{
+               font-size: 14px !important;
+            }
+        }
+    </style>
+
+    }
+    </style>
+    <style type="text/css">
+        @media(max-width: 414px){
+            #card{
+               display: block !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        @media(max-width: 680px){
+            #card{
+               display: block !important;
+            }
+        }
+    </style>
+    
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <style type="text/css">
+        #sponsor{
+            width: 300px; 
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    </style>
+    
+    <link rel='stylesheet' id='ult-ib2-style-css' href="{%static 'home/css/ib2-style.min.css'%}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ult_cllink-css' href="{%static 'home/css/creative-link.min.css'%}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ult_cllink-css' href="{%static 'home/css/aas.css'%}" type='text/css' media='all' />
+    <link rel='stylesheet' id='ult_cllink-css' href="{%static 'home/css/cardstyle.css'%}" type='text/css' media='all' />
+    
+    <script type='text/javascript' src="{%static 'home/js/creative-link.min.js'%}"></script>
+{% endblock head %}
+
+{% block bodytag %}
+class="page-template-default page page-id-1064 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+{% endblock bodytag %}
+
+{% block body %}
+
+    <div class="page-title-wrap" style="width: 98vw;">
+        <div class="page-title-bg rest-enable-parallax"></div>
+        <div class="page-title-tint"></div>
+        <div class="container header-flex header-enable-parallax" style="width: 99vw;">
+            <h1>Our Partners</h1>
+        </div>
+    </div>
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; width: 100%; justify-content: center;">
+
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://sbi.co.in/"><img src="{% static 'home/images/partners/sbi.jpg' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>STATE BANK OF INDIA</b>
+            </p>                
+                        
+        </div>
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.ril.com/"><img src="{% static 'home/images/partners/reliance.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>RELIANCE</b>
+            </p>                
+                        
+        </div>
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.coca-colacompany.com/"><img src="{% static 'home/images/partners/coca cola.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>COCA COLA</b>
+            </p>                
+                        
+        </div>
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://paytm.com/"><img src="{% static 'home/images/partners/paytm.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>PAYTM</b>
+            </p>                
+                        
+        </div>
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.ideacellular.com/"><img src="{% static 'home/images/partners/idea.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>IDEA</b>
+            </p>                
+                        
+        </div>
+
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.honda2wheelersindia.com/"><img src="{% static 'home/images/partners/honda.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>HONDA</b>
+            </p>                
+                        
+        </div>
+    
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.eprakriti.com/"><img src="{% static 'home/images/partners/prakriti.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>PRAKRITI</b>
+            </p>                
+               
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.smartknower.com/"><img src="{% static 'home/images/partners/ssk.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>SMARTKNOWER</b>
+            </p>                
+               
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.facebook.com/Unclejacksindia/"><img src="{% static 'home/images/partners/uncle-jacks.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>UNCLE JACKS</b>
+            </p>                
+                        
+        </div>
+        
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.shopclues.com"><img src="{% static 'home/images/partners/shopclues.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>SHOPCLUES</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://codingblocks.com/"><img src="{% static 'home/images/partners/codingblocks.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>CODING BLOCKS</b>
+            </p>                
+                        
+        </div>
+        
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.titan.co.in/"><img src="{% static 'home/images/partners/titan.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>TITAN</b>
+            </p>                
+                        
+        </div>
+        
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.linkedin.com/company/colinkers"><img src="{% static 'home/images/partners/colinkers.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>COLINKERS</b>
+            </p>                
+                        
+        </div>
+        
+        
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="http://www.paperboatdrinks.com/"><img src="{% static 'home/images/partners/pb.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>PAPER BOAT</b>
+            </p>                
+                        
+        </div>
+        
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.jagran.com/"><img src="{% static 'home/images/partners/dj.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>DAINIK JAGRAN</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.bhaskar.com/"><img src="{% static 'home/images/partners/db.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>DAINIK BHASKAR</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://zebronics.com/"><img src="{% static 'home/images/partners/zebronics.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>ZEBRONICS</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="#"><img src="{% static 'home/images/partners/red cafe.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>RED CAFE</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://www.wiley.com/en-us"><img src="{% static 'home/images/partners/wiley.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>WILEY</b>
+            </p>                
+                        
+        </div>
+        <div id="sponsor" class="card supcard"
+                    style="margin-top: 30px; border:none; box-shadow: 3px 5px 6px #ccc; padding-bottom: 0%; margin-bottom:30px;">
+                    
+            <a href="https://testbook.com/"><img src="{% static 'home/images/partners/testbook.png' %}" alt="Image" class="img-fluid" width="300px"></a>
+            <p style="background-color: #2F92BB; width: 100%; font-size: 20px; padding: 10px; text-align: center; color: white">
+                <b>TESTBOOK</b>
+            </p>                
+                        
+        </div>
+    </div>
+
+    
+    <!--<div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('images/bg_1.jpg')">
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col-lg-7">
+              <h2 class="mb-0">SPONSORS</h2>
+              <p>Check out our Sponsors</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+
+    <div class="custom-breadcrumns border-bottom">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span class="mx-3 icon-keyboard_arrow_right"></span>
+        <span class="current">Sponsors</span>
+      </div>
+    </div>-->
+
+    
+</div>
+    
+
+{% endblock body %}

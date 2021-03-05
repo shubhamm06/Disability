@@ -1,0 +1,73 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block head %}
+<title>EDC,TIET-Blog</title>
+<style>
+    .page-title-wrap{
+    background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+}
+
+ .page-title-bg{
+    background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+}
+
+ .container{
+    width: 100% !important;
+ }
+
+ button {
+    margin-right: 20px;
+    border-radius: 10px; 
+    padding: 15px 90px; 
+    margin: 30px auto; 
+    font-size: 21px; 
+    color: black; 
+    text-align: center;
+    display:block; 
+    color: white;
+    transition: 0.5s;
+    background: rgb(47, 146, 187);
+    max-width: 300px;
+}
+
+ button:hover {
+    transform: scale(1.02); 
+    font-size: 21px; 
+    color: black; 
+    text-align: center;
+    display:block; 
+    color: white;
+}
+</style>
+{% endblock head %}
+
+{% block bodytag %}
+    class="paged page-template page-template-tmp-blog-template page-template-tmp-blog-template-php page page-id-1039 paged-2 page-paged-2 woocommerce-no-js has-fixed-header     wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+{% endblock bodytag %}
+
+{% block body %}
+                
+    <div class="page-title-wrap" >
+        <div class="page-title-bg rest-enable-parallax"></div>
+        <div class="page-title-tint"></div>
+        <div class="container header-flex header-enable-parallax">
+            <h1>Delete Blog</h1>
+            
+        </div>
+    </div>
+                                                    
+    <div class="main-content" style="margin-top: 30px; margin-bottom: 30px; align-items: center; margin-right: auto; margin-left: auto; max-width: 70%; font-size: large;">
+        <div class="content-section" width=100>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group" width=100 ; style="font-size: 40px color:black; text-align: center; margin-bottom: 100px; margin-top: 100px;">
+                    <h2> Are you sure you want to delete "{{ object.title}}" ?</h2>
+                    <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                    <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}" style="border-radius: 10px; padding: 10px 90px; margin-top: 20px; border: solid 1px #000; font-size: 21px; color: black; text-align: center;"">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock body %}

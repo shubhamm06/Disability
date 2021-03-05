@@ -1,0 +1,196 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Search Results</title>
+<style>
+    .page-title-wrap {
+        background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+        z-index: -1;
+    }
+
+    .page-title-bg {
+        background-image:url({%static 'home/images/patrick-tomasso-71909.jpg' %}) !important;
+        z-index: -1;
+    }
+
+    .readmore:hover {
+        color: black;
+    }
+
+    .container{
+        width: 100% !important;
+
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 60px 0px 20px 0px;
+        color: #000;
+    }
+
+    .post-create a {
+        margin-right: 20px;
+        border-radius: 10px; 
+        padding: 15px 90px; 
+        margin: 30px auto; 
+        font-size: 21px; 
+        color: black; 
+        text-align: center;
+        display:block; 
+        color: white;
+        transition: 0.5s;
+        background: rgb(47, 146, 187);
+        max-width: 300px;
+    }
+
+    .post-create a:hover {
+        transform: scale(1.02); 
+        font-size: 21px; 
+        color: black; 
+        text-align: center;
+        display:block; 
+        color: white;
+    }
+
+    .publish-btn{
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        background: rgba(47, 146, 187,0.1);
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+    @media only screen and (min-width: 768px) {
+        .publish-btn{
+            width: 50%;
+        }
+    }
+</style>
+
+{% endblock head %}
+
+{% block bodytag %}
+    class="paged page-template page-template-tmp-blog-template page-template-tmp-blog-template-php page page-id-1039 paged-2 page-paged-2 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+{% endblock bodytag %}
+
+{% block body %}
+
+    <div class="page-title-wrap">
+        <div class="page-title-bg rest-enable-parallax"></div>
+        <div class="page-title-tint"></div>
+        <div class="container header-flex header-enable-parallax">
+            <h1>SEARCH RESULTS</h1>
+        </div>
+    </div>
+
+    <div class="post-create">
+        <a href="{% url 'post-create' %}">Write a Blog</a>
+    </div>
+
+
+<div class="main-content">
+    <div class="blog  blog-standardfull">
+        <!-- <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <form class="search" method="GET" autocomplete="off" action="{% url 'search' 1 %}">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="search" name="search" class="form-control" placeholder="Type something here">									
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary" type="submit"><i class="ion-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>								
+            </div>
+        </div> -->
+        <div class="row">
+            {% if posts %}
+                {% for post in posts %}
+                    <div class="column" style="display: flex; justify-content: center;">
+                        <div class="blog_item_wrapper effect-5 col-12 " style="display: flex; justify-content: center;">
+                            <div class="grid-sizer"></div>
+                            <div id="post-142"
+                                class=" blogs-style1 blogs-featured blogs-style2 spcard post-142 post type-post status-publish format-standard has-post-thumbnail hentry category-classics category-natu category-retro tag-machine-motion tag-photog tag-prints-3d"
+                                style="width: 80vw;">
+
+                                <div class="spwrapper cat_color__background_color">
+                                    <div class="spbgimg blog-roll-i post142"
+                                        style="background: url({{ post.blog_image.url }}); background-size: 100% 100%;">
+                                    </div>
+
+                                    <div class="spdata">
+                                        <div class="spcontent">
+                                            <span class="spauthor">
+                                                <a>
+                                                    <img src="{{ post.author_image.url }}" width="20"
+                                                        height="20" alt="{{ post.author }}"
+                                                        class="avatar avatar-20 wp-user-avatar wp-user-avatar-20 alignnone photo" />
+                                                    {{ post.author }}
+                                                </a>
+                                            </span>
+
+                                            <div class="spdate">
+                                                <i class="far fa-clock" aria-hidden="true"></i>{{ post.date_published }}
+                                            </div>
+
+                                            <h1 class="sptitle">
+                                                <a rel="bookmark" href="{% url 'post-detail' post.id %}"
+                                                    style="font-weight: bold; font-size: 25px; text-align: justify;">{{ post.title }}</a>
+                                            </h1>
+                                            <p class="sptext">{{ post.content|slice:":190" }}...</p>
+                
+                                            <a href="{% url 'post-detail' post.id %}" class="readmore">Read more</a>
+                                            <br>
+                                            {% if user.is_authenticated %}
+                                                {% if user.is_team %}
+                                                    {% if post.is_published %}
+                                                        <p class="publish-btn">Published</p>
+                                                    {% else %}
+                                                        <p class="publish-btn" >Not Published Yet</p>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+                <!-- <div class="pagination">
+                    <ul style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+                        {% if posts.has_previous %}
+                            <li><a class='page-selector' href= "{% url 'blog-home'  page|add:'-1' %}">&laquo;</a></li>
+                        {% endif %}
+                        {% for p in paginator.page_range %}
+                            {% if p == page %}
+                                <li class='active'><a href="">{{p}}</a></li>
+                            {% else %}
+                                <li><a href="{% url 'blog-home' p %}" class='inactive'>{{p}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if posts.has_next %}
+                            <li><a class='page-selector' href= "{% url 'blog-home'  page|add:'+1' %}">&raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </div> -->
+
+            {% else %}
+                <div class="wrapper">
+                        <h1 style="font-weight: bold;">No Results</h1>
+                </div>
+            {% endif %}
+        </div><!-- /row -->
+    </div><!-- /containerblog -->
+</div> <!-- content -->
+{% endblock body %}

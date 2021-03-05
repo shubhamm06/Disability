@@ -1,0 +1,465 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block head %}
+ <meta name="description" content="EDC,TIET organizes  a plethora of events like E-talks, Venture Lab, Pitchers and the annual E-Summit.">
+ <meta name="keywords" content="events edctiet, edctiet, events edc thapar,  ecell, edc, entrepreneurship development cell, edc thapar, thapar, thapar university">
+<link rel="pingback" href="{% static 'home/xmlrpc.php'%}" />
+<link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/css/stats-counter.min.css' %}" type='text/css' media='all' />
+
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+<title>EDC,TIET-Events</title>
+<style type="text/css" data-type="vc_shortcodes-custom-css">
+    .vc_custom_1522954642578 {
+        padding-top: 50px !important;
+        padding-bottom: 70px !important;
+    }
+
+    .vc_custom_1494624914514 {
+        padding-top: 50px !important;
+    }
+
+    .vc_custom_1494624919805 {
+        padding-bottom: 100px !important;
+    }
+
+    .vc_custom_1494626839758 {
+        padding-top: 100px !important;
+        padding-bottom: 210px !important;
+    }
+
+    .vc_custom_1494625858679 {
+        margin-top: -150px !important;
+    }
+
+    .vc_custom_1495476778635 {
+        margin-top: 100px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .vc_custom_1494618991842 {
+        padding-top: 50px !important;
+    }
+
+    .vc_custom_1494621972326 {
+        padding-top: 100px !important;
+    }
+
+    .vc_custom_1494621689637 {
+        margin-top: 30px !important;
+    }
+
+    .vc_custom_1494626651578 {
+        margin-top: 0px !important;
+        margin-bottom: 45px !important;
+    }
+
+    .vc_custom_1494628064641 {
+        margin-bottom: 45px !important;
+    }
+
+    .vc_custom_1494626726323 {
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .vc_custom_1494625719386 {
+        margin-top: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        padding-top: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1494625728900 {
+        margin-top: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        padding-top: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1494625737076 {
+        margin-top: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        padding-top: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .vc_custom_1495476642306 {
+        padding-bottom: 50px !important;
+    }
+    .flexx {
+        margin-left: 15px;
+        width: 100%;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-content: center !important;
+    }
+    .card {
+        width:39vw; 
+        margin:0 5% 5% 5%;
+    }
+</style>
+
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='stylesheet' id='ls-google-fonts-css' href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+    .woocommerce form .form-row .required {
+        visibility: visible;
+    }
+</style>
+
+<style>
+    audio::-webkit-media-controls-timeline,
+    video::-webkit-media-controls-timeline {
+        display: none;
+    }
+</style>
+<noscript>
+    <style>
+        .woocommerce-product-gallery {
+            opacity: 1 !important;
+        } 
+        .wpb_animate_when_almost_visible {
+            opacity: 1;
+        }
+    </style>
+</noscript>
+
+<style>
+    .vc_row{
+        max-width: 99vw !important;
+    }
+</style>
+<style>
+    @media only screen and (max-width: 1024px) {
+        .flexx {
+            margin-left: -15px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .card {
+            width:60vw; 
+            margin:0 20% 5% 20%;
+        }
+    }
+    @media only screen and (max-width: 425px) {
+        .flexx {
+            margin-left: 0px;
+        }
+        .card {
+            width:97vw; 
+            margin:0 1.5% 5% 1.5%;
+
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .vc_column_container>.vc_column-inner {
+            padding: 0px !important;
+        }
+    }
+</style>
+{%endblock head%}
+
+{%block bodytag%}
+class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-header     wpb-js-composer js-comp-ver-6.0.5 vc_responsive"
+{%endblock bodytag%}
+
+{%block body%}
+<div class="main-content ">
+    <div class="">
+        <div class="row">
+            <div class="vc_row wpb_row vc_row-fluid">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_layerslider_element wpb_content_element">
+                                <script data-cfasync="false" type="text/javascript">
+                                    var lsjQuery = jQuery;
+
+                                </script>
+                                <script data-cfasync="false" type="text/javascript">
+                                    lsjQuery(document).ready(function() {
+                                        if (typeof lsjQuery.fn.layerSlider == "undefined") {
+                                            if (window._layerSlider && window._layerSlider.showNotice) {
+                                                window._layerSlider.showNotice('layerslider_1', 'jquery');
+                                            }
+                                        } else {
+                                            lsjQuery("#layerslider_1").layerSlider({
+                                                sliderVersion: '6.7.1',
+                                                type: 'fullwidth',
+                                                responsiveUnder: 1000,
+                                                allowFullscreen: false,
+                                                maxRatio: 1000,
+                                                skin: 'v6',
+                                                navPrevNext: false,
+                                                hoverPrevNext: false,
+                                                navStartStop: false,
+                                                navButtons: false,
+                                                showCircleTimer: false,
+                                                thumbnailNavigation: 'disabled',
+                                            });
+                                        }
+                                    });
+
+                                </script>
+                                <div id="layerslider_1" class="ls-wp-container fitvidsignore" style="width:1280px;height:700px;margin:0 auto;margin-bottom: 0px; background-color:;">
+                                    <div class="ls-slide" data-ls="kenburnsscale:1.2;" style="">
+                                        <img width="2000" height="1000" src="{%static 'event/images/IMG_7147.JPG'%}" class="ls-bg " id="trans" alt="" sizes="(max-width: 2000px) 100vw, 2000px" style="" />
+
+                                        <h1 class="ls-l" style="width: 100%; height: 100%;padding-top: 35%; text-align:center;font-weight:800;font-style:normal;text-decoration:none;font-family:Lato;font-size:100px;line-height:120px;color:#ffffff; text-align: center;" data-ls="showinfo:1;parallax:true;parallaxlevel:-18;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">
+                                            Our Events</h1>
+                                        <!-- <a style="" class="ls-l" href="#startup" target="_self" data-ls="showinfo:1;offsetyin:-50px;delayin:1000;parallax:true;parallaxlevel:-10;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;"> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <div class="clear"></div>
+        </div>
+
+        <!-- Row Backgrounds -->
+        <div class="upb_bg_img" data-ultimate-bg="url{%static 'event/images/IMG_7147.jpg'%}" data-ultimate-bg-style="vcpb-vz-jquery" data-bg-img-repeat="repeat" data-bg-img-size="cover" data-bg-img-position="" data-parallx_sense="30" data-bg-override="0" data-bg_img_attach="scroll" data-upb-overlay-color="" data-upb-bg-animation="" data-fadeout="fadeout_row_value" data-bg-animation="left-animation" data-bg-animation-type="h" data-animation-repeat="repeat" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size="" style="background-repeat: no-repeat;"></div>
+    </div>
+</div>
+
+<div class="row main_body" style="margin-top: 200px;">
+
+    <div class="col-12 col-md-8 main_body_center" style="display:block; margin:auto; align-content: center;">
+        
+        <div class="vc_row wpb_row vc_row-fluid vc_custom_1494625858679 flexx">
+
+            <div class="wpb_column vc_column_container vc_col-sm-4 card" style="">
+                <div class="vc_column-inner vc_custom_1494625728900">
+                    <div class="wpb_wrapper">
+                        <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                            <div class="flip-box ifb-custom-height  horizontal_door_flip flip-box-custom-height flip-ifb-custom-height" id="cards" style="" data-min-height='550px'>
+                                <div class="ifb-flip-box" id="flip-box-wrap-4312">
+                                    <div class="ifb-face ifb-front " style="color:#666666;background:#dbd6d6;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat' !important;">
+                                                    E-TALKS
+                                                </h3>
+                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px; font-style: 'Montserrat' !important;">
+                                                    <p>
+                                                        26 APRIL - 21 JUNE, 2020
+                                                    </p>
+                                                </div>   
+                                    
+                                            <img class="img-icon" alt="null" src="{%static 'event/images/Etalks.png'%}" height="400px" width="400px" />   
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important; padding-left: 10%; padding-right: 10%">
+                                                <p><b>
+                                                     In order to replace the quarantine boredom with a tête-à-tête with some top players in the entrepreneurial world,EDC came up with E -TALKS-A series of interactive sessions with entrepreneurs 
+                                                </b></p>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .front -->
+                                    <div class="ifb-face ifb-back" id="cards" style="color:#666666;background:#efefef;">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-4312 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#666666 font-style: 'Montserrat' !important; ">E-TALKS</h3>
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important">
+                                                <p style="text-align: justify;">The Webinar Series involved a total of 10 sessions from 26 April to 21 June. Each webinar included an hour-long informative session by a business professional along with a question-answer round towards the end of the Webinar Series, each session welcomed more than 90 participants including by TIET Students, Students from outside TIET, and TIET faculty. The speakers at E-Talks included personalities like Mr. Samar Singla, CEO/Founder at Jugnoo; Mr. Ankit Prasad, Founder at Bobble.AI and, Mr. Sudeep Gupta, Director of International Business at OYO Rooms and many more prominent business person. The Webinar Series was a success with something unique to learn at every session.</p>
+                                                <a href="{% url 'etalks' %}">
+                                                    <button on- type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
+                                                            <span class="ubtn-data ubtn-icon">
+                                                                <i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;">
+                                                                    
+                                                                </i>
+                                                            </span>
+                                                            <span class="ubtn-hover" style="background-color:#f9f9f9">
+                                                                
+                                                            </span>
+                                                            <span class="ubtn-data ubtn-text ">Know More
+
+                                                            </span>
+                                                        </button>     
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .back -->
+                                </div> <!-- ifb-flip-box -->
+                            </div> <!-- flip-box -->
+                        </div><!-- End icon block -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="wpb_column vc_column_container vc_col-sm-4 card" style="">
+                <div class="vc_column-inner vc_custom_1494625737076">
+                    <div class="wpb_wrapper">
+                        <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                            <div class="flip-box ifb-custom-height  horizontal_flip_left flip-box-custom-height flip-ifb-custom-height" id="cards" style="" data-min-height='550px'>
+                                <div class="ifb-flip-box" id="flip-box-wrap-9665">
+                                    <div class="ifb-face ifb-front " style="color:#333333;background:#f3eeee;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat' !important;">
+                                                    STARTUP-WEEKEND
+                                                </h3>
+                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px; font-style: 'Montserrat' !important;">
+                                                    <p>
+                                                        OCTOBER - NOVEMBER, 2021
+                                                    </p>
+                                                </div>   
+                                            <img class="img-icon" alt="null" src="{%static 'event/images/startupexpo.jpg'%}" height="400px" width="400px" />
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important; padding-left: 10%; padding-right: 10%">
+                                                <p><b>
+                                                     StartUp Expo and Pitchers learn getting fundings and work on your plan and get from the Investors.
+                                                </b></p>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .front -->
+                                    <div class="ifb-face ifb-back" id="cards" style="">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h2 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-4312 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#666666; font-style: 'Montserrat' !important">STARTUP-WEEKEND</h2>
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666;">
+                                                <p style="text-align: justify !important; font-style: 'Montserrat' !important">StartUp Expo and Pitchers learn getting fundings and work on your plan and get from the Investors. The Expo provides startups a high-visibility platform facilitating unparalleled growth opportunities, investor meets, knowledge sessions, mentoring, partnership opportunities as well as business networking with top industry stakeholders. Pitcher's is a one day simulation event in which students of the college will take part where they get to experience the inner workings of a company, how they conduct their day to day and deal with issues that may affect future of the company.
+                                                </p>
+                                                <a href="{% url 'startupweekend' %}">
+                                                    <button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
+                                                            <span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;"></i></span>
+                                                            <span class="ubtn-hover" style="background-color:#f9f9f9"></span>
+                                                            <span class="ubtn-data ubtn-text ">Know More</span>
+                                                        </button>
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div><!-- END .back -->
+                                </div> <!-- ifb-flip-box -->
+                            </div> <!-- flip-box -->
+                        </div><!-- End icon block -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="wpb_column vc_column_container vc_col-sm-4 card" style="">
+                <div class="vc_column-inner vc_custom_1494625719386">
+                    <div class="wpb_wrapper">
+                        <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                            <div class="flip-box ifb-custom-height  horizontal_flip_left flip-box-custom-height flip-ifb-custom-height" id="cards" style="" data-min-height='550px'>
+                                <div class="ifb-flip-box" id="flip-box-wrap-5448">
+                                    <div class="ifb-face ifb-front " style="color:#333333;background:#f3eeee;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat'!important;">
+                                                    E-SUMMIT
+                                                </h3>
+                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px; font-style: 'Montserrat' !important;">
+                                                    <p>
+                                                        FEBURARY, 2021
+                                                    </p>
+                                                </div>                                                                                 
+                                            <img class="img-icon" alt="null" src="{%static 'event/images/esummit.png'%}" height="400px" width="400px" /> 
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important; padding-left: 10%; padding-right: 10% ">
+                                                <p><b>
+                                                     E -summit - our flagship event - brings to you for 3 days a series of exciting games, inspiring talks and our most awaited internship fair to awaken the spirit of entrepreneurship in you.
+                                                </b></p>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .front -->
+                                    <div class="ifb-face ifb-back" id="cards" style="color:#333333;background:#fcfcfc;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-5448 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-style: 'Montserrat' !important;" >E-SUMMIT</h3>
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-5448 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#333333;">
+                                                <p style="text-align: justify; font-style: 'Montserrat' !important;">
+                                                    The Entrepreneurship Cell is Asia's largest entrepreneurship promoting college body. Our flagship event, The E-Summit continues to inspire countless ideas, expedite innovative startups and multiply fruitful networks through a jam-packed cluster of events designed for everyone. The E-Summit 2020 aims to accelerate these ideas through the stratosphere. Because we know that great ideas are hard to come by!
+                                                </p>
+                                                <a href="{% url 'esummit' %}">
+                                                    <button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
+                                                            <span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;"></i></span>
+                                                            <span class="ubtn-hover" style="background-color:#f9f9f9"></span>
+                                                            <span class="ubtn-data ubtn-text ">Know More</span>
+                                                        </button>
+                                                    
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .back -->
+                                </div> <!-- ifb-flip-box -->
+                            </div> <!-- flip-box -->
+                        </div><!-- End icon block -->
+                    </div>
+                </div>
+            </div> 
+            <div class="wpb_column vc_column_container vc_col-sm-4 card" style="">
+                <div class="vc_column-inner vc_custom_1494625728900">
+                    <div class="wpb_wrapper">
+                        <div class="flip-box-wrap" style="margin:0px;padding:0px;">
+                            <div class="flip-box ifb-custom-height  horizontal_door_flip flip-box-custom-height flip-ifb-custom-height" id="cards" style="" data-min-height='550px'>
+                                <div class="ifb-flip-box" id="flip-box-wrap-4312">
+                                    <div class="ifb-face ifb-front " style="color:#666666;background:#dbd6d6;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat' !important;">
+                                                    VL-WEEKEND
+                                                </h3>
+                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px; font-style: 'Montserrat' !important;">
+                                                    <p>
+                                                        MARCH, 2021
+                                                    </p>
+                                                </div>   
+                                    
+                                            <img class="img-icon" alt="null" src="{%static 'event/images/vl.jpg'%}" height="400px" width="400px" />   
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important; padding-left: 10%; padding-right: 10%">
+                                                <p><b>
+                                                    Venture Lab,a 3 day workshop instilling and promoting the spirit of entrepreneurship among the participants by empowering today's youth with the tools needed to become the initiator of change towards a self sustainable future.
+                                                </b></p>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .front -->
+                                    <div class="ifb-face ifb-back" id="cards" style="color:#666666;background:#efefef;  ">
+                                        <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
+                                            <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-4312 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#666666 font-style: 'Montserrat' !important; ">VL-WEEKEND</h3>
+                                            <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-4312 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#666666; font-style: 'Montserrat' !important">
+                                                <p style="text-align: justify;">The workshop expects a heavy footfall courtesy of students of Thapar Institute and other well known colleges of North India. The 3 day workshop will help the students understand how to execute an idea about something and make a profitable, marketable, feasible business out of it in the competitive environment of today. Participants will be taught things like how to pitch their ideas, value proposition, the benefits of collaboration and the art of sustaining it in high-pressure situations and many more things which are essential for a startup.</p>
+                                                <a href="{% url 'vl' %}">
+                                                    <button on- type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
+                                                            <span class="ubtn-data ubtn-icon">
+                                                                <i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;">
+                                                                    
+                                                                </i>
+                                                            </span>
+                                                            <span class="ubtn-hover" style="background-color:#f9f9f9">
+                                                                
+                                                            </span>
+                                                            <span class="ubtn-data ubtn-text ">Know More
+
+                                                            </span>
+                                                        </button>     
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!-- END .back -->
+                                </div> <!-- ifb-flip-box -->
+                            </div> <!-- flip-box -->
+                        </div><!-- End icon block -->
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{%endblock body%}
