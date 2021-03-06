@@ -13,7 +13,7 @@
         gtag('config', 'UA-173904872-1');
     </script>
 
-    <link rel="shortcut icon" href="{%static 'home/images/favicon.ico'%}" type="image/x-icon">
+    <link rel="shortcut icon" href="{%static 'home/images/edclogo1.PNG'%}" type="image/x-icon">
     <style id='benri-style-inline-css' type='text/css'>
         /* Body background */
         body {
@@ -900,8 +900,8 @@
                     <div class="hlogo">
                         <div class="hlogoinner">
                             <a href="{% url 'home' %}">
-                                <img height="80" width="146" alt="" src="{% static 'home/images/Logo.png' %}" style="padding: 5px !important" />
-                                <img height="80" width="146" class="fixed_header_logo" alt="" src="{% static 'home/images/Logo.png' %}" style="padding: 5px !important" />
+                                <img height="80" width="146" alt="" src="{% static 'home/images/edclogo1.png' %}" style="padding: 5px !important" />
+                                <img height="80" width="146" class="fixed_header_logo" alt="" src="{% static 'home/images/edclogo1.png' %}" style="padding: 5px !important" />
                             </a>
                         </div>
                     </div>
@@ -915,51 +915,50 @@
                                     href="{% url 'home' %}" data-hover="Home">Home</a></li>
                             <li id="menu-item-1478"
                                 class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1478">
-                                <a href="{% url 'events' %}">Events</a>
+                                <a href="{% url 'events' %}">Programs</a>
                                 <ul class="sub-menu">
                                     <li id="menu-item-1482"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio current-menu-item menu-item-1482">
-                                        <a href="{% url 'startupweekend' %}" aria-current="page">The StartUp Weekend</a></li>
+                                        <a href="{% url 'startupweekend' %}" aria-current="page">1</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'esummit' %}" data-hover="Header generic style">E-Summit</a></li>
+                                            href="{% url 'esummit' %}" data-hover="Header generic style">2</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'vl' %}" data-hover="Header generic style">Venture Lab</a></li>
+                                            href="{% url 'vl' %}" data-hover="Header generic style">3</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'etalks' %}" data-hover="Header generic style">E-Talks</a></li>
+                                            href="{% url 'etalks' %}" data-hover="Header generic style">4</a></li>
                                 </ul>
                             </li>
-                            <li id="menu-item-1478"
+                             <li id="menu-item-1478"
                                 class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1478">
-                                <a href="{% url 'ecosystem-home' %}">StartUp Ecosystem</a>
+                                <a href="{% url 'ecosystem-home' %}">xyz</a>
                                 <ul class="sub-menu">
                                     <li id="menu-item-1482"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio current-menu-item menu-item-1482">
-                                        <a href="{% url 'startup' %}"  aria-current="page">StartUp</a></li>
+                                        <a href="{% url 'startup' %}"  aria-current="page">z</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'investors' %}" data-hover="Header generic style">Investor</a></li>
+                                            href="{% url 'investors' %}" data-hover="Header generic style">y</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'venture-capitalist' %}" data-hover="Header generic style">Venture
-                                            Capitalist</a></li>
+                                            href="{% url 'venture-capitalist' %}" data-hover="Header generic style">zt</a></li>
                                 </ul>
-                            </li>
+                            </li> 
                 
                             <li id="menu-item-1471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1471">
-                                <a href="{% url 'blog-home' '1' %}">Bizfanatics</a>
+                                <a href="{% url 'blog-home' '1' %}">Blog</a>
                             </li>
                             <li id="menu-item-1480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1480">
-                                <a href="{% url 'internships' 1 %}">Internships</a>
+                                <a href="{% url 'internships' 1 %}">JOBS</a>
                             <ul class="sub-menu">
                                     <li id="menu-item-1482"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio current-menu-item menu-item-1482">
-                                        <a href="{% url 'ecosystem-home' %}"  aria-current="page">Terms & Conditions</a></li>
+                                        <a href="{% url 'ecosystem-home' %}"  aria-current="page">FAQ</a></li>
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
-                                            href="{% url 'internships' 1 %}" data-hover="Header generic style">Browse Internships</a></li>
+                                            href="{% url 'internships' 1 %}" data-hover="Header generic style">Browse Jobs</a></li>
                                 {% if request.user.is_startup == True %}
                                     <li id="menu-item-1483"
                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1483"><a
